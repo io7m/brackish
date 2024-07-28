@@ -71,6 +71,7 @@ public final class WaveDemoMain
     Platform.startup(() -> {
       try {
         final var stage = new Stage();
+        stage.setTitle("Brackish");
         stage.setMinWidth(640);
         stage.setMinHeight(400);
 
