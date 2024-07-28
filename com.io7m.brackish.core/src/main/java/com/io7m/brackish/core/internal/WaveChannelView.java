@@ -244,10 +244,9 @@ public final class WaveChannelView extends Canvas
       g.setStroke(this.waveView.waveformExpandedSampleStroke());
       g.setFill(this.waveView.waveformExpandedSampleFill());
 
-      for (int x = 0; x < w; x += pixelsPerFrame) {
+      for (double x = 0; x < w; x += pixelsPerFrame) {
         final var position =
-          (double) x / w;
-
+          x / w;
         final var p0 =
           viewRange.lower() * (1 - position);
         final var p1 =
@@ -305,10 +304,9 @@ public final class WaveChannelView extends Canvas
       final var polyPointsX = new double[4];
       final var polyPointsY = new double[4];
 
-      for (int x = 0; x < w; x += pixelsPerFrame) {
+      for (double x = 0; x < w; x += pixelsPerFrame) {
         final var position =
-          (double) x / w;
-
+          x / w;
         final var p0 =
           viewRange.lower() * (1 - position);
         final var p1 =
