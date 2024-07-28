@@ -37,5 +37,5 @@ to allow the application to sample waveforms.
 
 A [demo application](com.io7m.brackish.demo) is included.
 
-![ugly](src/site/resources/brackish2.png)
+![Brackish](src/site/resources/brackish2.png)
 
