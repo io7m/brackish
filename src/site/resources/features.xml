@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <ul>
+    <li>Render waveforms in realtime.</li>
+    <li>Zoom and scroll waveforms.</li>
+    <li>Written in pure Java 21.</li>
+    <li><a href="https://www.osgi.org/">OSGi</a>-ready</li>
+    <li>ISC license</li>
+  </ul>
+</div>

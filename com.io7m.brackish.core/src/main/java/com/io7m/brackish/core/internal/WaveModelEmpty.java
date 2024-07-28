@@ -1,0 +1,84 @@
+/*
+ * Copyright © 2024 Mark Raynsford <code@io7m.com> https://www.io7m.com
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+ * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+
+
+package com.io7m.brackish.core.internal;
+
+import com.io7m.brackish.core.WaveModelType;
+import com.io7m.jranges.RangeCheck;
+
+/**
+ * An empty wave model with one channel and no frames.
+ */
+
+public final class WaveModelEmpty implements WaveModelType
+{
+  /**
+   * An empty wave model with one channel and no frames.
+   */
+
+  public WaveModelEmpty()
+  {
+
+  }
+
+  @Override
+  public long frameCount()
+  {
+    return 0;
+  }
+
+  @Override
+  public int channelCount()
+  {
+    return 1;
+  }
+
+  @Override
+  public double sample(
+    final int channel,
+    final long frameIndex)
+  {
+    RangeCheck.checkLessInteger(
+      channel,
+      "Channel index",
+      this.channelCount(),
+      "Channel count"
+    );
+    RangeCheck.checkLessLong(
+      frameIndex,
+      "Frame index",
+      0L,
+      "Frame count"
+    );
+    RangeCheck.checkGreaterEqualLong(
+      frameIndex,
+      "Frame index",
+      0L,
+      "Frame count"
+    );
+    return 0.0;
+  }
+
+  @Override
+  public double sampleOrDefault(
+    final int channel,
+    final long frameIndex,
+    final double orElse)
+  {
+    return orElse;
+  }
+}
