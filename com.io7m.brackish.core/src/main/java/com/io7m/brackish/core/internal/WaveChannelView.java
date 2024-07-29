@@ -173,7 +173,7 @@ public final class WaveChannelView extends Canvas
 
       g.setFill(this.waveView.waveformCollapsedSampleFill());
 
-      for (int x = 0; x < w; ++x) {
+      for (double x = 0; x < w; ++x) {
         final var frameIndex =
           (double) viewRange.lower() + (x * framesPerPixel);
 
