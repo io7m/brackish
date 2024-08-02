@@ -17,7 +17,6 @@
 
 package com.io7m.brackish.tests;
 
-import com.io7m.brackish.core.WaveRenderStyle;
 import com.io7m.brackish.core.WaveView;
 import com.io7m.jranges.RangeInclusiveL;
 import com.io7m.xoanon.commander.api.XCCommanderType;
