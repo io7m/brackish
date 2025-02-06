@@ -44,7 +44,7 @@
 
     <!-- Third-party dependencies. -->
     <ch.qos.logback.version>1.5.16</ch.qos.logback.version>
-    <net.jqwik.version>1.9.1</net.jqwik.version>
+    <net.jqwik.version>1.9.2</net.jqwik.version>
     <org.javafx.version>23-ea+22</org.javafx.version>
     <org.jooq.version>3.19.10</org.jooq.version>
     <org.junit.version>5.11.4</org.junit.version>
